@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+using EspacioCliente;
+
+Cliente prueba=new Cliente("Luis","Su casa","El celular","Al lado del vecino");
+
+prueba.MostrarCliente();
