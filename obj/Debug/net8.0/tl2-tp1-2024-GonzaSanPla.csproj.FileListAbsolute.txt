@@ -13,3 +13,18 @@ C:\Users\Alumno\tl2-tp1-2024-GonzaSanPla\obj\Debug\net8.0\refint\tl2-tp1-2024-Go
 C:\Users\Alumno\tl2-tp1-2024-GonzaSanPla\obj\Debug\net8.0\tl2-tp1-2024-GonzaSanPla.pdb
 C:\Users\Alumno\tl2-tp1-2024-GonzaSanPla\obj\Debug\net8.0\tl2-tp1-2024-GonzaSanPla.genruntimeconfig.cache
 C:\Users\Alumno\tl2-tp1-2024-GonzaSanPla\obj\Debug\net8.0\ref\tl2-tp1-2024-GonzaSanPla.dll
+C:\Users\Gonzalo\Taller de leguajes 2\tl2-tp1-2024-GonzaSanPla\obj\Debug\net8.0\tl2-tp1-2024-GonzaSanPla.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gonzalo\Taller de leguajes 2\tl2-tp1-2024-GonzaSanPla\obj\Debug\net8.0\tl2-tp1-2024-GonzaSanPla.AssemblyInfoInputs.cache
+C:\Users\Gonzalo\Taller de leguajes 2\tl2-tp1-2024-GonzaSanPla\obj\Debug\net8.0\tl2-tp1-2024-GonzaSanPla.AssemblyInfo.cs
+C:\Users\Gonzalo\Taller de leguajes 2\tl2-tp1-2024-GonzaSanPla\obj\Debug\net8.0\tl2-tp1-2024-GonzaSanPla.csproj.CoreCompileInputs.cache
+C:\Users\Gonzalo\Taller de leguajes 2\tl2-tp1-2024-GonzaSanPla\obj\Debug\net8.0\tl2-tp1-2024-GonzaSanPla.sourcelink.json
+C:\Users\Gonzalo\Taller de leguajes 2\tl2-tp1-2024-GonzaSanPla\obj\Debug\net8.0\tl2-tp1-2024-GonzaSanPla.dll
+C:\Users\Gonzalo\Taller de leguajes 2\tl2-tp1-2024-GonzaSanPla\obj\Debug\net8.0\refint\tl2-tp1-2024-GonzaSanPla.dll
+C:\Users\Gonzalo\Taller de leguajes 2\tl2-tp1-2024-GonzaSanPla\obj\Debug\net8.0\tl2-tp1-2024-GonzaSanPla.pdb
+C:\Users\Gonzalo\Taller de leguajes 2\tl2-tp1-2024-GonzaSanPla\bin\Debug\net8.0\tl2-tp1-2024-GonzaSanPla.exe
+C:\Users\Gonzalo\Taller de leguajes 2\tl2-tp1-2024-GonzaSanPla\bin\Debug\net8.0\tl2-tp1-2024-GonzaSanPla.deps.json
+C:\Users\Gonzalo\Taller de leguajes 2\tl2-tp1-2024-GonzaSanPla\bin\Debug\net8.0\tl2-tp1-2024-GonzaSanPla.runtimeconfig.json
+C:\Users\Gonzalo\Taller de leguajes 2\tl2-tp1-2024-GonzaSanPla\bin\Debug\net8.0\tl2-tp1-2024-GonzaSanPla.dll
+C:\Users\Gonzalo\Taller de leguajes 2\tl2-tp1-2024-GonzaSanPla\bin\Debug\net8.0\tl2-tp1-2024-GonzaSanPla.pdb
+C:\Users\Gonzalo\Taller de leguajes 2\tl2-tp1-2024-GonzaSanPla\obj\Debug\net8.0\tl2-tp1-2024-GonzaSanPla.genruntimeconfig.cache
+C:\Users\Gonzalo\Taller de leguajes 2\tl2-tp1-2024-GonzaSanPla\obj\Debug\net8.0\ref\tl2-tp1-2024-GonzaSanPla.dll

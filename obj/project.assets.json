@@ -8,26 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Alumno\\.nuget\\packages\\": {}
+    "C:\\Users\\Gonzalo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alumno\\tl2-tp1-2024-GonzaSanPla\\tl2-tp1-2024-GonzaSanPla.csproj",
+      "projectUniqueName": "C:\\Users\\Gonzalo\\Taller de leguajes 2\\tl2-tp1-2024-GonzaSanPla\\tl2-tp1-2024-GonzaSanPla.csproj",
       "projectName": "tl2-tp1-2024-GonzaSanPla",
-      "projectPath": "C:\\Users\\Alumno\\tl2-tp1-2024-GonzaSanPla\\tl2-tp1-2024-GonzaSanPla.csproj",
-      "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alumno\\tl2-tp1-2024-GonzaSanPla\\obj\\",
+      "projectPath": "C:\\Users\\Gonzalo\\Taller de leguajes 2\\tl2-tp1-2024-GonzaSanPla\\tl2-tp1-2024-GonzaSanPla.csproj",
+      "packagesPath": "C:\\Users\\Gonzalo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gonzalo\\Taller de leguajes 2\\tl2-tp1-2024-GonzaSanPla\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Gonzalo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -66,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
