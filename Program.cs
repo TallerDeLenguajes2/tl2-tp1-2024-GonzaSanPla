@@ -35,6 +35,8 @@ do
     }
 }while(opcion!="5");
 
+miCadeteria.MostarMontoTotal();
+
 
 static string ElegirOpcion()
 {
@@ -87,3 +89,4 @@ static Cadeteria cambiarCadeteDelPedido(Cadeteria cadeteria)
 
     return cadeteria;
 }
+

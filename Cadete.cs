@@ -72,6 +72,10 @@ public class Cadete
     {
         return ListadoPedidos.Count()*500;
     }
+    public int CantidadPedidos()
+    {
+        return listadoPedidos.Count();
+    }
     public string Nombre { get => nombre; set => nombre = value; }
     public int Id { get => id; set => id = value; }
     public List<Pedido> ListadoPedidos { get => listadoPedidos; set => listadoPedidos = value; }

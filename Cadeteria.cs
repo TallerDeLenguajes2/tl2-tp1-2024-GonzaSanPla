@@ -109,18 +109,25 @@ public class Cadeteria
     }
     public void MostarMontoTotal()
     {
-        int total=0;
+        
+        int total=0, contadorPedidos=0,promedioEnvios;
         Console.ForegroundColor=ConsoleColor.DarkYellow;
-        Console.WriteLine("\n ----------Monto total por cadete ----------");
+        Console.WriteLine("\n ----------Informacion  por cadete ----------");
         foreach(Cadete cadete in ListadoCadetes)
         {
             total+=cadete.MontoTotal();
-            Console.WriteLine("\n\nNombre:"+cadete.Nombre+"\nId:"+cadete.Id+"Monto total:"+cadete.MontoTotal);
+            contadorPedidos+=cadete.CantidadPedidos();
+            Console.WriteLine("\n\nNombre:"+cadete.Nombre+"\nId:"+cadete.Id+"\nMonto total:"+cadete.MontoTotal()+"\nCantidad de pedidos:"+cadete.CantidadPedidos());
 
         }
+        promedioEnvios=contadorPedidos/(listadoCadetes.Count);
         Console.ForegroundColor=ConsoleColor.DarkYellow;
-        Console.WriteLine("\n ----------Monto total del dia ----------");
-        Console.WriteLine("\nTotak:"+total);
+        Console.WriteLine("\n ----------Total del dia ----------");
+        Console.WriteLine("\nMonto total:"+total);
+        Console.WriteLine("\nCantidad de envios:"+contadorPedidos);
+        Console.WriteLine("\nPromedio de envios por cadete:"+promedioEnvios);
+
+
 
     }
     public string Nombre { get => nombre; set => nombre = value; }
