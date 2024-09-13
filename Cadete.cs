@@ -58,7 +58,7 @@ public class Cadete
     public void MostarCadete()
     {
         Console.ForegroundColor=ConsoleColor.DarkBlue;
-        Console.WriteLine("\n\nId:",Id,"\nNombre:",Nombre);
+        Console.WriteLine("\n\nId:"+Id+"\nNombre:"+Nombre);
     }
 
     public Pedido QuitarPedido(int numPedidoQuitar)
