@@ -63,7 +63,7 @@ public class Cadeteria
         {
             if(pedidoElegido != null)
             {
-                // cadeteElegido.AgregarPedido(pedidoElegido);
+                pedidoElegido.AsignarCadete(cadeteElegido);
                 pedidosNoAsignados.Remove(pedidoElegido);
             }else
             {
@@ -81,11 +81,11 @@ public class Cadeteria
     {
         foreach (Cadete cadete in ListadoCadetes)
         {
-            // Pedido pedidoElegido= cadete.ListadoPedidos.FirstOrDefault(Pedido=>Pedido.NumPedido==NumPedido);
-            // if(pedidoElegido!= null)
-            // {
-            //     pedidoElegido.CambiarEstado();
-            // }
+            Pedido pedidoElegido= pedidosAsignados.FirstOrDefault(Pedido=>Pedido.NumPedido==NumPedido);
+            if(pedidoElegido!= null)
+            {
+                pedidoElegido.CambiarEstado();
+            }
         }
     }
     public void MostarMontoTotal()
