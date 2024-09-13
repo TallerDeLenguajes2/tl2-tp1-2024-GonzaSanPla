@@ -2,8 +2,9 @@
 namespace EspacioPedido;
 
 using System.Runtime.CompilerServices;
+using EspacioCadete;
 using EspacioCliente;
-
+using EspacioPedido;
 public class Pedido
 {
     private int  numPedido;
@@ -11,6 +12,7 @@ public class Pedido
     private Cliente clientePedido;
     private Estado estado;
 
+    private Cadete cadete;
     public enum Estado
     {
         Preparado,
@@ -32,7 +34,10 @@ public class Pedido
         observacion=Console.ReadLine();   
     }
 
-
+    public void AsignarCadete(Cadete cadete)
+    {
+        this.cadete=cadete;
+    }
     public void MostarDireccionCliente()
     {
         ClientePedido.MostrarDireccion();

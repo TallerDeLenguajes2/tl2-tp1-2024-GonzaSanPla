@@ -85,7 +85,7 @@ static Cadeteria cambiarCadeteDelPedido(Cadeteria cadeteria)
         Console.WriteLine("Ingrese el numnero del cadete que quiera reasignar el pedido:");
     }while( !int.TryParse(Console.ReadLine(),out opcionEmpleado));
 
-    cadeteria.cambiarCadeteDelPedido(opcionPedido,opcionEmpleado);
+    // cadeteria.cambiarCadeteDelPedido(opcionPedido,opcionEmpleado);
 
     return cadeteria;
 }

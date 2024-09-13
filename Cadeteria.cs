@@ -10,6 +10,8 @@ public class Cadeteria
     private string telefono;
     private List<Cadete> listadoCadetes= new List<Cadete>(); 
     private List<Pedido> pedidosNoAsignados = new List<Pedido>();
+    private List<Pedido> pedidosAsignados = new List<Pedido>();
+
     private int contPedidos=0;
 
 
@@ -61,7 +63,7 @@ public class Cadeteria
         {
             if(pedidoElegido != null)
             {
-                cadeteElegido.AgregarPedido(pedidoElegido);
+                // cadeteElegido.AgregarPedido(pedidoElegido);
                 pedidosNoAsignados.Remove(pedidoElegido);
             }else
             {
@@ -79,32 +81,11 @@ public class Cadeteria
     {
         foreach (Cadete cadete in ListadoCadetes)
         {
-            Pedido pedidoElegido= cadete.ListadoPedidos.FirstOrDefault(Pedido=>Pedido.NumPedido==NumPedido);
-            if(pedidoElegido!= null)
-            {
-                pedidoElegido.CambiarEstado();
-            }
-        }
-    }
-    public void cambiarCadeteDelPedido(int numPedido, int numCadeteNuevo)
-    {
-        Pedido pedido=null;
-        foreach (Cadete cadete in ListadoCadetes)
-        {
-            if(pedido==null)
-            {
-                pedido=cadete.QuitarPedido(numPedido);
-            }
-        }
-  
-        Cadete cadeteElegio=ListadoCadetes.FirstOrDefault(cadete=>cadete.Id==numCadeteNuevo);
-        if(pedido!=null)
-        {
-            cadeteElegio.AgregarPedido(pedido);
-        }else
-        {
-            Console.ForegroundColor=ConsoleColor.Red;
-            Console.WriteLine("NO SE ENCOTRO EL PEDIDO");
+            // Pedido pedidoElegido= cadete.ListadoPedidos.FirstOrDefault(Pedido=>Pedido.NumPedido==NumPedido);
+            // if(pedidoElegido!= null)
+            // {
+            //     pedidoElegido.CambiarEstado();
+            // }
         }
     }
     public void MostarMontoTotal()
@@ -116,9 +97,9 @@ public class Cadeteria
         Console.WriteLine("\n ----------Informacion  por cadete ----------");
         foreach(Cadete cadete in ListadoCadetes)
         {
-            total+=cadete.MontoTotal();
-            contadorPedidos+=cadete.CantidadPedidos();
-            Console.WriteLine("\n\nNombre:"+cadete.Nombre+"\nId:"+cadete.Id+"\nMonto total:"+cadete.MontoTotal()+"\nCantidad de pedidos:"+cadete.CantidadPedidos());
+            // total+=cadete.MontoTotal();
+            // contadorPedidos+=cadete.CantidadPedidos();
+            // Console.WriteLine("\n\nNombre:"+cadete.Nombre+"\nId:"+cadete.Id+"\nMonto total:"+cadete.MontoTotal()+"\nCantidad de pedidos:"+cadete.CantidadPedidos());
 
         }
         cantCadetes=listadoCadetes.Count;

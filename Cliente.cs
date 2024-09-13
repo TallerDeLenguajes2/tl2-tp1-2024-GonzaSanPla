@@ -1,6 +1,7 @@
 
 using System.Linq;
 namespace EspacioCliente;
+
 public class Cliente
 {
     private string nombre;
