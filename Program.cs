@@ -23,7 +23,7 @@ do
             miCadeteria.DarDeAltaPedidos();
             break;
         case "2":
-            miCadeteria.AsignarPedido();
+            miCadeteria=AsignarPedido(miCadeteria);
             break;
         case "3":
             miCadeteria=cambiarEstadoPedido(miCadeteria);
@@ -87,6 +87,56 @@ static Cadeteria cambiarCadeteDelPedido(Cadeteria cadeteria)
 
     // cadeteria.cambiarCadeteDelPedido(opcionPedido,opcionEmpleado);
 
+    return cadeteria;
+}
+
+static Cadeteria AsignarPedido(Cadeteria cadeteria)
+{
+        int idCadete,idPedido;
+        string idCadeteS,idPedidoS;
+        Console.ForegroundColor=ConsoleColor.DarkBlue;
+        // Console.WriteLine("\n ----------Lista de cadetes de "+Nombre+"----------");
+        // foreach(Cadete cadete in ListadoCadetes)
+        // {
+        //     cadete.MostarCadete();
+        // }
+
+        Console.WriteLine("\nIngrese el id del cadete al que le quiere asignar el pedido:");
+        int.TryParse(Console.ReadLine(), out idCadete);
+
+
+        Console.ForegroundColor=ConsoleColor.DarkGreen;
+        // Console.WriteLine("\n ----------Lista de pedidos pendientes----------");
+        // foreach(Pedido pedido in pedidosNoAsignados)
+        // {
+        //     pedido.MostrarPedido();
+        // }
+
+        Console.WriteLine("\nIngrese el id del pedido :");
+        int.TryParse(Console.ReadLine(), out idPedido);
+
+
+
+        cadeteria.AsignarPedido(idCadete,idPedido);
+      
+        //Mostrar mensaje de error por si ingresa un id de cadete o de pedido mal!!!!!
+
+        // if(cadeteElegido != null)
+        // {
+        //     if(pedidoElegido != null)
+        //     {
+        //         pedidoElegido.AsignarCadete(cadeteElegido);
+        //         pedidosNoAsignados.Remove(pedidoElegido);
+        //     }else
+        //     {
+        //         Console.ForegroundColor=ConsoleColor.DarkRed;
+        //         Console.WriteLine("No se encontro el pedido");
+        //     }
+        // }else
+        // {
+        //     Console.ForegroundColor=ConsoleColor.DarkRed;
+        //     Console.WriteLine("No se encontro el cadete");
+        // }
     return cadeteria;
 }
 

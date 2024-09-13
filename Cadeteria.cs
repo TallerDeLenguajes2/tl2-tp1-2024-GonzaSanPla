@@ -32,30 +32,8 @@ public class Cadeteria
 
     }
 
-    public void AsignarPedido()
+    public void AsignarPedido( int idCadete,int idPedido)
     {
-        int idCadete,idPedido;
-        string idCadeteS,idPedidoS;
-        Console.ForegroundColor=ConsoleColor.DarkBlue;
-        Console.WriteLine("\n ----------Lista de cadetes de "+Nombre+"----------");
-        foreach(Cadete cadete in ListadoCadetes)
-        {
-            cadete.MostarCadete();
-        }
-
-        Console.WriteLine("\nIngrese el id del cadete al que le quiere asignar el pedido:");
-        int.TryParse(Console.ReadLine(), out idCadete);
-
-
-        Console.ForegroundColor=ConsoleColor.DarkGreen;
-        Console.WriteLine("\n ----------Lista de pedidos pendientes----------");
-        foreach(Pedido pedido in pedidosNoAsignados)
-        {
-            pedido.MostrarPedido();
-        }
-
-        Console.WriteLine("\nIngrese el id del pedido :");
-        int.TryParse(Console.ReadLine(), out idPedido);
         Cadete cadeteElegido= ListadoCadetes.FirstOrDefault(Cadete=>Cadete.Id==idCadete);  // Te tira el primero que encuentra o null si no los encuentra 
         Pedido pedidoElegido= pedidosNoAsignados.FirstOrDefault(Pedido=>Pedido.NumPedido==idPedido);
       
@@ -64,19 +42,11 @@ public class Cadeteria
             if(pedidoElegido != null)
             {
                 pedidoElegido.AsignarCadete(cadeteElegido);
+                pedidosAsignados.Add(pedidoElegido);
                 pedidosNoAsignados.Remove(pedidoElegido);
-            }else
-            {
-                Console.ForegroundColor=ConsoleColor.DarkRed;
-                Console.WriteLine("No se encontro el pedido");
             }
-        }else
-        {
-            Console.ForegroundColor=ConsoleColor.DarkRed;
-            Console.WriteLine("No se encontro el cadete");
         }
     }
-
     public void CambiarEstado(int NumPedido)
     {
         foreach (Cadete cadete in ListadoCadetes)
