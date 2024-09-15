@@ -1,6 +1,7 @@
 namespace EspacioCadeteria;
 
 using System.Data.Common;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 using EspacioCadete;
 using EspacioPedido;
@@ -82,18 +83,21 @@ public class Cadeteria
 
         return montoTotalCadetes; 
     }
-     public void MostarMontoTotalCadeteria()
+     public string MostarMontoTotalCadeteria()
     {
-        int total=0, contadorPedidos=0,cantCadetes=0;
-        float promedioEnvios=0;
-        cantCadetes=listadoCadetes.Count;
-        promedioEnvios=(float)contadorPedidos/cantCadetes;
-        Console.ForegroundColor=ConsoleColor.DarkYellow;
-        Console.WriteLine("\n ----------Total del dia ----------");
-        Console.WriteLine("\nMonto total:"+total);
-        Console.WriteLine("\nCantidad de envios:"+pedidosAsignados.Count);
-        Console.WriteLine("\nPromedio de envios por cadete:"+promedioEnvios);
+        float promedioEnvios;
+        string montoDia;
 
+        foreach(Cadete cadete in listadoCadetes)
+        {
+                total+=cadete.MontoTotal();
+        }
+
+        promedioEnvios=(float)pedidosAsignados.Count/listadoCadetes.Count;
+ 
+        montoDia=("\nMonto total:"+total+"\nCantidad de envios:"+pedidosAsignados.Count+"\nPromedio de envios por cadete:"+promedioEnvios);
+
+        return montoDia;
     }
     public string Nombre { get => nombre; set => nombre = value; }
     public string Telefono { get => telefono; set => telefono = value; }

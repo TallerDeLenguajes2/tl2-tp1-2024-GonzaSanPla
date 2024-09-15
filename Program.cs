@@ -141,6 +141,8 @@ static Cadeteria cambiarCadeteDelPedido(Cadeteria cadeteria)
 static void Informe(Cadeteria miCadeteria)
 {
     List<string> montosTotalesCadetes= new List<string>();
+    string totalDia;
+
     Console.ForegroundColor=ConsoleColor.DarkYellow;
     Console.WriteLine("\n ----------Informacion  por cadete ----------");
 
@@ -149,6 +151,7 @@ static void Informe(Cadeteria miCadeteria)
     {
         Console.WriteLine(montoCadete);
     }
-    
-
+    Console.WriteLine("\n ----------Total del dia ----------");
+    totalDia=miCadeteria.MostarMontoTotalCadeteria();
+    Console.WriteLine(totalDia);
 }
