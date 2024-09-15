@@ -1,6 +1,7 @@
 namespace EspacioCadeteria;
 
 using System.Data.Common;
+using System.Runtime.InteropServices;
 using EspacioCadete;
 using EspacioPedido;
 
@@ -14,7 +15,7 @@ public class Cadeteria
 
     private int contPedidos=0;
 
-
+    private int total=0;
     public Cadeteria()
     {
 
@@ -58,29 +59,40 @@ public class Cadeteria
             }
         }
     }
-    public void MostarMontoTotal()
+    public void cambiarCadeteDelPedido(int idCadete,int idPedido)
     {
-        
+        Cadete cadeteElegido= ListadoCadetes.FirstOrDefault(Cadete=>Cadete.Id==idCadete);  // Te tira el primero que encuentra o null si no los encuentra 
+        Pedido pedidoElegido= pedidosAsignados.FirstOrDefault(Pedido=>Pedido.NumPedido==idPedido);
+
+        pedidoElegido.AsignarCadete(cadeteElegido);
+    }
+    
+    public List<string> MostarMontoTotalCadetes()
+    {
+        List<string> montoTotalCadetes= new List<string>();
+        foreach(Pedido pedido in pedidosAsignados)
+        {
+            pedido.Cadete.SumarPedido();
+        }
+
+        foreach(Cadete cadete in listadoCadetes)
+        {
+            montoTotalCadetes.Add("\n"+cadete.MostarCadeteInfo()+"\nMonto total:"+cadete.MontoTotal());
+        }
+
+        return montoTotalCadetes; 
+    }
+     public void MostarMontoTotalCadeteria()
+    {
         int total=0, contadorPedidos=0,cantCadetes=0;
         float promedioEnvios=0;
-        Console.ForegroundColor=ConsoleColor.DarkYellow;
-        Console.WriteLine("\n ----------Informacion  por cadete ----------");
-        foreach(Cadete cadete in ListadoCadetes)
-        {
-            // total+=cadete.MontoTotal();
-            // contadorPedidos+=cadete.CantidadPedidos();
-            // Console.WriteLine("\n\nNombre:"+cadete.Nombre+"\nId:"+cadete.Id+"\nMonto total:"+cadete.MontoTotal()+"\nCantidad de pedidos:"+cadete.CantidadPedidos());
-
-        }
         cantCadetes=listadoCadetes.Count;
         promedioEnvios=(float)contadorPedidos/cantCadetes;
         Console.ForegroundColor=ConsoleColor.DarkYellow;
         Console.WriteLine("\n ----------Total del dia ----------");
         Console.WriteLine("\nMonto total:"+total);
-        Console.WriteLine("\nCantidad de envios:"+contadorPedidos);
+        Console.WriteLine("\nCantidad de envios:"+pedidosAsignados.Count);
         Console.WriteLine("\nPromedio de envios por cadete:"+promedioEnvios);
-
-
 
     }
     public string Nombre { get => nombre; set => nombre = value; }

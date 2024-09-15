@@ -36,7 +36,7 @@ public class Pedido
 
     public void AsignarCadete(Cadete cadete)
     {
-        this.cadete=cadete;
+        this.Cadete=cadete;
     }
     public void MostarDireccionCliente()
     {
@@ -61,4 +61,5 @@ public class Pedido
     public global::System.String Observacion { get => observacion; set => observacion = value; }
     public Cliente ClientePedido { get => clientePedido; set => clientePedido = value; }
     public int NumPedido { get => numPedido; set => numPedido = value; }
+    public Cadete Cadete { get => cadete; set => cadete = value; }
 }

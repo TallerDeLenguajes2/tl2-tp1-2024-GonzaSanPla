@@ -29,13 +29,12 @@ do
             miCadeteria=cambiarEstadoPedido(miCadeteria);
             break;
         case "4":
-
             miCadeteria=cambiarCadeteDelPedido(miCadeteria);
             break;
     }
 }while(opcion!="5");
 
-miCadeteria.MostarMontoTotal();
+Informe(miCadeteria);
 
 
 static string ElegirOpcion()
@@ -56,40 +55,6 @@ static string ElegirOpcion()
 
     return opcion;
 }
-
-static Cadeteria cambiarEstadoPedido(Cadeteria cadeteria)
-{
-    int opcionPedido,opcionEmpleado;
-    Console.ForegroundColor=ConsoleColor.Gray;
-    do
-    {
-        Console.WriteLine("Ingrese el numnero del pedido que quiere cambiar de estado:");
-    }while(!int.TryParse(Console.ReadLine(),out opcionPedido));
-
-    cadeteria.CambiarEstado(opcionPedido);
-
-    return cadeteria;
-}
-
-static Cadeteria cambiarCadeteDelPedido(Cadeteria cadeteria)
-{
-    int opcionPedido,opcionEmpleado;
-    Console.ForegroundColor=ConsoleColor.Gray;
-    do
-    {
-        Console.WriteLine("Ingrese el numnero del pedido que quiere cambiar de cadete:");
-    }while( !int.TryParse(Console.ReadLine(),out opcionPedido));
-    do
-    {
-        Console.ForegroundColor=ConsoleColor.Gray;
-        Console.WriteLine("Ingrese el numnero del cadete que quiera reasignar el pedido:");
-    }while( !int.TryParse(Console.ReadLine(),out opcionEmpleado));
-
-    // cadeteria.cambiarCadeteDelPedido(opcionPedido,opcionEmpleado);
-
-    return cadeteria;
-}
-
 static Cadeteria AsignarPedido(Cadeteria cadeteria)
 {
         int idCadete,idPedido;
@@ -140,3 +105,50 @@ static Cadeteria AsignarPedido(Cadeteria cadeteria)
     return cadeteria;
 }
 
+static Cadeteria cambiarEstadoPedido(Cadeteria cadeteria)
+{
+    int opcionPedido,opcionEmpleado;
+    Console.ForegroundColor=ConsoleColor.Gray;
+    do
+    {
+        Console.WriteLine("Ingrese el numnero del pedido que quiere cambiar de estado:");
+    }while(!int.TryParse(Console.ReadLine(),out opcionPedido));
+
+    cadeteria.CambiarEstado(opcionPedido);
+
+    return cadeteria;
+}
+
+static Cadeteria cambiarCadeteDelPedido(Cadeteria cadeteria)
+{
+    int opcionPedido,opcionEmpleado;
+    Console.ForegroundColor=ConsoleColor.Gray;
+    do
+    {
+        Console.WriteLine("Ingrese el numnero del pedido que quiere cambiar de cadete:");
+    }while( !int.TryParse(Console.ReadLine(),out opcionPedido));
+    do
+    {
+        Console.ForegroundColor=ConsoleColor.Gray;
+        Console.WriteLine("Ingrese el numnero del cadete que quiera reasignar el pedido:");
+    }while( !int.TryParse(Console.ReadLine(),out opcionEmpleado));
+
+    cadeteria.cambiarCadeteDelPedido(opcionEmpleado,opcionPedido);
+
+    return cadeteria;
+}
+
+static void Informe(Cadeteria miCadeteria)
+{
+    List<string> montosTotalesCadetes= new List<string>();
+    Console.ForegroundColor=ConsoleColor.DarkYellow;
+    Console.WriteLine("\n ----------Informacion  por cadete ----------");
+
+    montosTotalesCadetes=miCadeteria.MostarMontoTotalCadetes();
+    foreach (string montoCadete in montosTotalesCadetes)
+    {
+        Console.WriteLine(montoCadete);
+    }
+    
+
+}

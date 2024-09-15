@@ -9,8 +9,11 @@ public class Cadete
     private string direccion;
     private string telefono;
 
+    private int contPedidos=0;
 
+    private int montoTotal=0;
 
+    static int MONTOPORPEDIDO=500;
     public Cadete()
     {
 
@@ -33,45 +36,26 @@ public class Cadete
         Telefono=Console.ReadLine();
     }
 
-    public void AgregarPedido(Pedido NuevoPedido)
+    public string MostarCadeteInfo()
     {
-        // ListadoPedidos.Add(NuevoPedido);
-    }
-    public void MostrarPedidos()
-    {
-        // Console.WriteLine(ListadoPedidos);
-        // if(ListadoPedidos.Count.Equals(0))
-        // {
-        //      Console.ForegroundColor=ConsoleColor.DarkRed;
-        //     Console.WriteLine("\n"+Nombre+" no tiene ningun pedido");
-        // }else
-        // {
-        //      Console.ForegroundColor=ConsoleColor.DarkGreen;
-        //     Console.WriteLine("\n ----------Lista de pedidos de "+Nombre+"----------");
-            // foreach (Pedido pedido in ListadoPedidos)
-            // {
-            //     pedido.MostrarPedido();
-            // }
-        // }
+        string infoCadete="\nId:"+Id+"\nNombre:"+Nombre;
+        return(infoCadete);
     }
 
-    public void MostarCadete()
+    public void SumarPedido()
     {
-        Console.ForegroundColor=ConsoleColor.DarkBlue;
-        Console.WriteLine("\n\nId:"+Id+"\nNombre:"+Nombre);
+        contPedidos++;
     }
 
-    // public Pedido QuitarPedido(int numPedidoQuitar)
-    // {
-        // Pedido pedidoElegido= ListadoPedidos.FirstOrDefault(Pedido=>Pedido.NumPedido==numPedidoQuitar);
+    public int MontoTotal()
+    {
+        for (int i = 0; i < contPedidos; i++)
+        {
+            montoTotal+=MONTOPORPEDIDO;
+        }
 
-        // ListadoPedidos.Remove(pedidoElegido);
-        // return pedidoElegido;
-    // }
-    // public int MontoTotal()
-    // {
-        // return ListadoPedidos.Count()*500;
-    // }
+        return montoTotal;
+    }
 
     public string Nombre { get => nombre; set => nombre = value; }
     public int Id { get => id; set => id = value; }
