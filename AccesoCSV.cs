@@ -16,10 +16,6 @@ class  AccesoCSV: AccesoADatos
             string [] campos = lineas.Split(','); //lineas.Split(',') devuelve un arreglo cuyos campos son cada elemento entre comas
             cadeteria.Nombre = campos[0];
             cadeteria.Telefono = campos[1];
-        }else
-        {
-            Console.ForegroundColor=ConsoleColor.Red;
-            Console.WriteLine("No se encontro el archivo");
         }
     }
 
@@ -41,10 +37,6 @@ class  AccesoCSV: AccesoADatos
                 cadeteria.agregarCadete(cadete);
                 lineas = x.ReadLine();
             }
-        }else
-        {
-            Console.ForegroundColor=ConsoleColor.Red;
-            Console.WriteLine("No se encontro el archivo");
         }
     }
 

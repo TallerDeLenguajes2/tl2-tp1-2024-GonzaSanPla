@@ -26,10 +26,9 @@ public class Cadeteria
     {
         listadoCadetes.Add(cadete);
     }
-    public void DarDeAltaPedidos()
+    public void DarDeAltaPedidos(Pedido nuevoPedido)
     {
-        Pedido nuevoPedido= new Pedido(contPedidos);
-        contPedidos++;
+        ContPedidos++;
         pedidosNoAsignados.Add(nuevoPedido);
 
     }
@@ -102,4 +101,5 @@ public class Cadeteria
     public string Nombre { get => nombre; set => nombre = value; }
     public string Telefono { get => telefono; set => telefono = value; }
     public List<Cadete> ListadoCadetes { get => listadoCadetes; set => listadoCadetes = value; }
+    public int ContPedidos { get => contPedidos; set => contPedidos = value; }
 } 

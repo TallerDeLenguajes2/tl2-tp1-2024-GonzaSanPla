@@ -17,7 +17,7 @@ do
     switch(opcion)
     {
         case "1":
-            miCadeteria.DarDeAltaPedidos();
+            miCadeteria=DarDeAltaPedidos(miCadeteria);
             break;
         case "2":
             miCadeteria=AsignarPedido(miCadeteria);
@@ -93,6 +93,34 @@ static string ElegirOpcionCadeteria()
     }while(opcion!="1"&&opcion!="2"&&opcion!="3"&&opcion!="4"&&opcion!="5");
 
     return opcion;
+}
+
+static Cadeteria DarDeAltaPedidos(Cadeteria cadeteria)
+{
+    string observacion,nombre,direccion,telefono,datosReferenciaDirección;
+
+    Console.ForegroundColor=ConsoleColor.White;
+    Console.WriteLine("\n ----------Carga de datos del cliente----------");
+
+    Console.ForegroundColor=ConsoleColor.Gray;
+    Console.WriteLine("\nIngrese los datos del cliente");
+        
+    Console.WriteLine("\n -Nombre:");
+    nombre=Console.ReadLine();
+    Console.WriteLine("\n -Direccion:");
+    direccion=Console.ReadLine();
+    Console.WriteLine("\n Telefono:");
+    telefono=Console.ReadLine();
+    Console.WriteLine("\n Datos adicionales de la direccion:");
+    datosReferenciaDirección=Console.ReadLine();
+    Cliente cliente=new Cliente(nombre,direccion,telefono,datosReferenciaDirección);
+
+    Console.ForegroundColor=ConsoleColor.Gray;
+    Console.WriteLine("\nIngrese alguna observacion del pedido:");
+    observacion=Console.ReadLine();   
+
+    Pedido pedido=new Pedido(cadeteria.ContPedidos,cliente,observacion);
+    return cadeteria;
 }
 static Cadeteria AsignarPedido(Cadeteria cadeteria)
 {

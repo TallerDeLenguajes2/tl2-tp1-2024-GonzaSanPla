@@ -26,10 +26,6 @@ class  AccesoJSON: AccesoADatos
                 }
             }
             cadeteria=JsonSerializer.Deserialize<Cadeteria>(documento);
-        }else
-        {
-            Console.ForegroundColor=ConsoleColor.Red;
-            Console.WriteLine("No se encontro el archivo");
         }
     }
 
@@ -47,10 +43,6 @@ class  AccesoJSON: AccesoADatos
                 }
             }
             cadeteria.ListadoCadetes=JsonSerializer.Deserialize<List<Cadete>>(documento);
-        }else
-        {
-            Console.ForegroundColor=ConsoleColor.Red;
-            Console.WriteLine("No se encontro el archivo");
         }
     }
 

@@ -18,23 +18,25 @@ public class Cadete
     {
 
     }
-    public Cadete(int idIngresado)
-    {
-        Id=idIngresado;
+    // public Cadete(int idIngresado)
 
-        Console.ForegroundColor=ConsoleColor.White;
-        Console.WriteLine("\n ----------Carga de datos del cadete----------");
+    // public Cadete(int idIngresado)
+    // {
+    //     Id=idIngresado;
 
-        Console.ForegroundColor=ConsoleColor.Gray;
-        Console.WriteLine("\nIngrese los datos del cadete");
+    //     Console.ForegroundColor=ConsoleColor.White;
+    //     Console.WriteLine("\n ----------Carga de datos del cadete----------");
+
+    //     Console.ForegroundColor=ConsoleColor.Gray;
+    //     Console.WriteLine("\nIngrese los datos del cadete");
         
-        Console.WriteLine("\n -Nombre:");
-        Nombre=Console.ReadLine();
-        Console.WriteLine("\n -Direccion:");
-        Direccion=Console.ReadLine();
-        Console.WriteLine("\n Telefono:");
-        Telefono=Console.ReadLine();
-    }
+    //     Console.WriteLine("\n -Nombre:");
+    //     Nombre=Console.ReadLine();
+    //     Console.WriteLine("\n -Direccion:");
+    //     Direccion=Console.ReadLine();
+    //     Console.WriteLine("\n Telefono:");
+    //     Telefono=Console.ReadLine();
+    // }
 
     public string MostarCadeteInfo()
     {

@@ -12,35 +12,42 @@ public class Cliente
     public Cliente()
     {
 
-        Console.ForegroundColor=ConsoleColor.White;
-        Console.WriteLine("\n ----------Carga de datos del cliente----------");
+        // Console.ForegroundColor=ConsoleColor.White;
+        // Console.WriteLine("\n ----------Carga de datos del cliente----------");
 
-        Console.ForegroundColor=ConsoleColor.Gray;
-        Console.WriteLine("\nIngrese los datos del cliente");
+        // Console.ForegroundColor=ConsoleColor.Gray;
+        // Console.WriteLine("\nIngrese los datos del cliente");
         
-        Console.WriteLine("\n -Nombre:");
-        Nombre=Console.ReadLine();
-        Console.WriteLine("\n -Direccion:");
-        direccion=Console.ReadLine();
-        Console.WriteLine("\n Telefono:");
-        telefono=Console.ReadLine();
-        Console.WriteLine("\n Datos adicionales de la direccion:");
-        datosReferenciaDirección=Console.ReadLine();
+        // Console.WriteLine("\n -Nombre:");
+        // Nombre=Console.ReadLine();
+        // Console.WriteLine("\n -Direccion:");
+        // direccion=Console.ReadLine();
+        // Console.WriteLine("\n Telefono:");
+        // telefono=Console.ReadLine();
+        // Console.WriteLine("\n Datos adicionales de la direccion:");
+        // datosReferenciaDirección=Console.ReadLine();
     }
 
+    public Cliente(string nombreIngresado, string direccionIngresado,string telefonoIngresado,string datosReferenciaDirecciónIngresado)
+    {
+        nombre=nombreIngresado;
+        direccion=direccionIngresado;
+        telefono=telefonoIngresado;
+        datosReferenciaDirección=datosReferenciaDirecciónIngresado;
+    }
 
     public void CargarCliente()
     {
 
     }
-    public void MostrarCliente()
+    public string MostrarCliente()
     {
-        Console.WriteLine("\nNombre: "+Nombre+"\nDireccion: "+direccion+"\nTelefono: "+telefono+"\nDatos de la dirección: "+DatosReferenciaDirección);
+        return("\nNombre: "+Nombre+"\nDireccion: "+direccion+"\nTelefono: "+telefono+"\nDatos de la dirección: "+DatosReferenciaDirección);
     }
 
-    public void MostrarDireccion()
+    public string MostrarDireccion()
     {
-        Console.WriteLine("\nDireccion de ",Nombre,": ", direccion);
+        return ("\nDireccion de "+Nombre+": "+ direccion);
     }
 
 

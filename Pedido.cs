@@ -24,13 +24,12 @@ public class Pedido
     {
 
     }
-    public  Pedido(int numPedidoIng)
+    public  Pedido(int numPedidoIng, Cliente clienteIng,string observacionIng) //Ing=Ingresado
     {
         NumPedido=numPedidoIng;
-        clientePedido= new Cliente();
+        clientePedido= clienteIng;
         estado= Estado.Preparado;
-        Console.ForegroundColor=ConsoleColor.Gray;
-        Console.WriteLine("\nIngrese alguna observacion del pedido:");
+       
         observacion=Console.ReadLine();   
     }
 
