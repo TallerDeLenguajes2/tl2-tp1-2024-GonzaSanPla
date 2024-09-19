@@ -1,0 +1,20 @@
+[
+    {
+        "Id": 1,
+        "Nombre": "Lucas",
+        "Direccion": "Mendoza 1230",
+        "Telefono": "3816381920"
+    },
+    {
+        "Id": 2,
+        "Nombre": "Lucia",
+        "Direccion": "Salta 4310",
+        "Telefono": "381453012"
+    },
+    {
+        "Id": 3,
+        "Nombre": "Luis",
+        "Direccion": "Francia 250",
+        "Telefono": "3818419031"
+    }
+]

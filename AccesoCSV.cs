@@ -1,20 +1,13 @@
-namespace EspacioManejoDatos;
+namespace EspacioAccesoCSV;
 
 using EspacioCadeteria;
 using EspacioCadete;
-class ManejoDatos
+using EspacioAccesoADatos;
+class  AccesoCSV: AccesoADatos
 {
-    public bool existeArchivo(string path)
-    {
-        FileInfo file = new FileInfo(path); //crep un objeto archivo y path es la ruta donde esta el archivo
-        if(file.Exists && file.Length > 0)
-        {
-            return true;
-        }else{
-            return false;
-        }
-    }
-    public void cargarCadeteria(string path, Cadeteria cadeteria)
+    public AccesoCSV()
+    {}
+    public override void cargarCadeteria(string path, Cadeteria cadeteria)
     {
         if(existeArchivo(path))
         {
@@ -30,7 +23,7 @@ class ManejoDatos
         }
     }
 
-    public void cargarCadetes(string path, Cadeteria cadeteria)
+    public override void cargarCadetes(string path, Cadeteria cadeteria)
     {
         if(existeArchivo(path))
         {

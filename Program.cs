@@ -2,21 +2,18 @@
 using EspacioCadete;
 using EspacioCliente;
 using EspacioPedido;
-using EspacioManejoDatos;
+using EspacioAccesoADatos;
+using EspacioAccesoCSV;
+using EspacioAccesoJSON;
 using EspacioCadeteria;
 
-ManejoDatos manejoDatos = new ManejoDatos();
 Cadeteria miCadeteria= new Cadeteria();
-
-string opcion = "3";
-
-manejoDatos.cargarCadeteria("cadeteria.csv",miCadeteria);
-manejoDatos.cargarCadetes("cadetes.csv",miCadeteria);
-
+string opcion="0";
+miCadeteria=CargarDatos();
 
 do
 {
-    opcion=ElegirOpcion();
+    opcion=ElegirOpcionCadeteria();
     switch(opcion)
     {
         case "1":
@@ -36,8 +33,50 @@ do
 
 Informe(miCadeteria);
 
+static Cadeteria CargarDatos()
+{
+    Cadeteria cadeteria=new Cadeteria();
+    string pathCadetria="",pathCadetes="";
 
-static string ElegirOpcion()
+    string carga=ElegirOpcionCargaDatos();
+    switch (carga)
+    {
+        case"1":
+            AccesoCSV datosCSV = new AccesoCSV();    
+            pathCadetria="cadeteria.csv";
+            pathCadetes="cadetes.csv";
+            datosCSV.cargarCadeteria(pathCadetria,cadeteria);
+            datosCSV.cargarCadetes(pathCadetes,cadeteria);
+
+            break;
+        case"2":
+            AccesoJSON datosjSON = new AccesoJSON();    
+            pathCadetria="cadeteria.json";
+            pathCadetes="cadetes.json";
+            datosjSON.cargarCadeteria(pathCadetria,cadeteria);
+            datosjSON.cargarCadetes(pathCadetes,cadeteria);
+            break;
+    }
+
+    return cadeteria;
+}
+static string ElegirOpcionCargaDatos()
+{
+    string opcion;
+        do
+        {
+            Console.ForegroundColor=ConsoleColor.White;
+            Console.WriteLine("------------Elija la forma de cargar datos------------");
+            Console.WriteLine("1-Mendiante CSV");
+            Console.WriteLine("2-Mendiante JSON");
+            opcion=Console.ReadLine();
+        }while(opcion!="1"&&opcion!="2");
+
+        return opcion;
+}
+
+
+static string ElegirOpcionCadeteria()
 {
     string opcion;
     do
